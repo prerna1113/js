@@ -1,14 +1,14 @@
 
+
 function Person(name,age){
     this.name = name;
-    this.age = age;
-
+    this.age = age
 }
 
-Person.prototype.greet = function(){
-    console.log(`Hello ${this.name} and ur age is ${this.age}`);
+Person.prototype.greet= function(){
+    console.log(`hello my name is ${this.name} and age is ${this.age}`);
 }
 
-const dove = new Person('dove', 30);
+ const john = new Person('john', 49)
 
-dove.greet();
+ john.greet();
