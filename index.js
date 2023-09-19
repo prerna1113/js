@@ -1,22 +1,18 @@
 
 
-console.log("hello index")
-
-function getUsers(callback) {
+function getUser(callback) {
     setTimeout(()=>{
-        const users= [
+        const users =[
             {name: 'John', email: 'john@example.com'},
-            {name:'janet', email: 'janet@example'}
+            {name: 'Joe', email: 'Joe@example.com'}
         ]
         callback(users)
     },100)
-
-    
 }
 
 function findUsers(username) {
-    getUsers(users=>{
-        const user = users.find(user=> user.name==username)
+    getUser(users=>{
+        const user = users.find(user=>user.name==username)
         console.log(user)
     })
 }
