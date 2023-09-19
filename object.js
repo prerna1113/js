@@ -8,3 +8,7 @@ const person ={
 }
 
     person.greet()
+
+
+
+    
