@@ -1,13 +1,11 @@
 // Promise
 
-function fetchData() {
+function fetchData(){
     return new Promise((resolve,reject)=>{
-
         setTimeout(()=>{
-            const data = {name:'john', age: 20}
+            const data = {name:'Prerna', age: 23}
 
             const error = false;
-
             if(!error){
                 resolve(data);
             }
@@ -17,12 +15,11 @@ function fetchData() {
         },100)
     })
 }
-
 fetchData()
 .then(data=>{
-    console.log('success',data);
+    console.log('success', data)
 })
 
 .catch(error=>{
-    console.log('error',error)
+    console.log('error', error);
 })
