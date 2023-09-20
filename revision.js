@@ -46,3 +46,25 @@ function findUser(username){
 }
 
 findUser('james')
+
+async function fetchInfo(){
+    try {
+        const response = await fetch(`https://api.publicapis.org/entries`)
+        const data = await response.json();
+        return data;
+        
+    } catch (error) {
+        console.log('error',error);
+        throw error
+        
+    }
+}
+
+fetchInfo()
+.then(data=>{
+    console.log('API',data);
+
+})
+.catch(error=>{
+    console.log('error',error);
+})
