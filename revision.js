@@ -23,3 +23,26 @@ fetchData()
 .catch(error=>{
     console.log('error', error);
 })
+
+
+function getUsers(callback){
+
+    setTimeout(()=>{
+        const users = [
+            {name:'sabastian', email:'sabastian@gmail.com'},
+            {name:'james', email:'james@gmail.com'}
+           
+        ]
+        callback(users)
+
+    })
+}
+
+function findUser(username){
+    getUsers(users=>{
+        const user = users.find(user=>user.name==username)
+        console.log(user)
+    })
+}
+
+findUser('james')
