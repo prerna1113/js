@@ -2,7 +2,11 @@ import React from 'react';
 
 function Component(){
     return (
-        <h1>Component</h1>
+        
+        <div>
+            
+            <img src="https://i.imgur.com/MK3eW3Am.jpg" alt ="Katherine johnson" />
+        </div>
     )
 }
 
