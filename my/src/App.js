@@ -6,6 +6,7 @@ import './App.css';
 // import Card from './Component/Card';
 // import ConditionalRendering from './Component/ConditionalRendering';
 import List from './Component/List';
+import Event from './Component/Event/Event';
 // import PackingList from './Component/PackingList';
 
 function App() {
@@ -17,7 +18,8 @@ function App() {
       {/* <Card /> */}
       {/* <ConditionalRendering /> */}
       {/* <PackingList /> */}
-      <List />
+      {/* <List /> */}
+      <Event />
     
     </div>
   );

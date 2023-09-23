@@ -3,11 +3,11 @@ function Item({ name, isPacked }) {
     <li className="item">
       {isPacked ? (
         <del>
-          {name + ' ✔'}
+          {name + '333zar65f4wq dhknyjtytr321` ✔'}
         </del>
       ) : (
         name
-      )}
+      )}a
     </li>
   );
 }

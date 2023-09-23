@@ -3,16 +3,20 @@
  import { people } from './data.js';
  
  export default function List() {
-    const chemist = people.filter(people=>
-        people.profession ==='chemist');
+    const chemist = people.filter(person=>
+        person.profession ==='chemist');
 
-        const listItems = people.map(people=>
-            <li key={people.id}>
-                <img  alt ="people.name"/>
-                <p><b>{people.name}</b>
-                profession:{people.profession}
+        const listItems = chemist.map(person=>
+            
+            <li key={person.id} >
+               
+                <img  alt ="person.name"/>
+                <p><b>{person.name}</b>
+                profession:{person.profession}
                 </p>
-            </li>)
+               
+            </li>
+           )
   
    return <ul>{listItems}</ul>;
  }
