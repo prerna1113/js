@@ -22,6 +22,7 @@ function Event(){
             >Click me</button>
 
             <Btn message='playing' children ='play video' />
+            <Btn  message ='gaming' children ='play game'/>
         </div>
     )
 

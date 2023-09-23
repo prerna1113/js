@@ -7,6 +7,7 @@ import './App.css';
 // import ConditionalRendering from './Component/ConditionalRendering';
 import List from './Component/List';
 import Event from './Component/Event/Event';
+import State from './Component/State';
 // import PackingList from './Component/PackingList';
 
 function App() {
@@ -19,7 +20,8 @@ function App() {
       {/* <ConditionalRendering /> */}
       {/* <PackingList /> */}
       {/* <List /> */}
-      <Event />
+      {/* <Event /> */}
+      <State />
     
     </div>
   );
