@@ -4,7 +4,9 @@ import './App.css';
 // import Gallery from './Component/Gallery';
 // import TodoList from './Component/TodoList';
 // import Card from './Component/Card';
-import ConditionalRendering from './Component/ConditionalRendering';
+// import ConditionalRendering from './Component/ConditionalRendering';
+import List from './Component/List';
+// import PackingList from './Component/PackingList';
 
 function App() {
   return (
@@ -13,7 +15,9 @@ function App() {
       {/* <Gallery /> */}
       {/* <TodoList /> */}
       {/* <Card /> */}
-      <ConditionalRendering />
+      {/* <ConditionalRendering /> */}
+      {/* <PackingList /> */}
+      <List />
     
     </div>
   );

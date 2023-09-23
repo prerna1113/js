@@ -1,28 +1,34 @@
-import React from 'react'
+import React from 'react';
 
-function Item({isTrue,list}){
+
+function Item({list,isTrue}){
   return(
-    <li>{list}</li>
+   <li>
+    {list} {isTrue && '^'}
+   </li>
   )
 }
 
-function ConditionalRendering() {
-  return (
-  <div>
-   <Item 
-   isTrue='true'
-   list='I am not gonna come'   />
+ export default function ConditionalRendering() {
+  return(
+    <div>
+      <h1>Sally's Packing List</h1>
+      <Item 
+      isTrue={true}
+      list ='Packed Clothes'
+      />
 
 <Item 
-   isTrue='true'
-   list='I am not gonna come'   />
-
-<Item 
-   isTrue='true'
-   list='I am not gonna come'   />
-
-  </div>
+      isTrue={true}
+      list ='Packed Clothes'
+      />
+        <Item 
+      isTrue={false}
+      list ='Packed Clothes'
+      />
+    </div>
   )
 }
 
-export default ConditionalRendering
+
+
