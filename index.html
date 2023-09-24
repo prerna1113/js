@@ -29,19 +29,43 @@
 
      <input  type="submit" value ="submit" style="width:100px"/>
     </form>
+    <div id = "tableContainer"></div>
   </div>
  
     
 </body>
 
 <script>
-   let formData =[]
+   let formDataArray =[]
+
+   function validateForm(){
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+
+    if(name ==="" || email ==="" || password ===""){
+    alert("please enter the required name");
+    return false;
+   }
+
+   return true;
+    
+   }
+
+
   function handleSubmit(e){
     e.preventDefault();
+
+    if(!validateForm()){
+      return 
+    }
+
 
     let name = document.getElementById("name").value;
     let email = document.getElementById("email").value;
     let password = document.getElementById("password").value;
+
+    
 
     let form={
       name:name,
@@ -49,11 +73,44 @@
       password:password
 
     }
+    formDataArray.push(form)
+console.log(formDataArray);
 
-    formData.push(form)
-console.log(formData);
-   
+
+    displayTable()
   }
+  
+
+  function displayTable() {
+            let tableContainer = document.getElementById('tableContainer');
+            // tableContainer.innerHTML = '';
+
+            if (formDataArray.length > 0) {
+                let table = document.createElement('table');
+                let headerRow = table.insertRow(0);
+
+                for (let key in formDataArray[0]) {
+                    let headerCell = headerRow.insertCell();
+                    headerCell.textContent = key;
+                }
+
+                for (let i = 0; i < formDataArray.length; i++) {
+                    let row = table.insertRow();
+
+                    for (let key in formDataArray[i]) {
+                        let cell = row.insertCell();
+                        cell.textContent = formDataArray[i][key];
+                    }
+                }
+
+                tableContainer.appendChild(table);
+            }
+        }
+  
+
+
+   
+  
 
   document.getElementById("myForm").addEventListener("submit",handleSubmit)
 </script>
